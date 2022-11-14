@@ -1,0 +1,33 @@
+body {
+    color: $text-color;
+    background-color: $background-secondary;
+    font-family: $roboto;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+button {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}

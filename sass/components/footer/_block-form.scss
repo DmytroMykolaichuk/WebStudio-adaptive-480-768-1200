@@ -1,0 +1,50 @@
+.block-form__title {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    text-transform: uppercase;
+    color: $background-secondary;
+    margin-bottom: 20px;
+}
+
+.block-form__form {
+    display: flex;
+}
+
+.block-form__lable {
+    margin-right: 12px;
+}
+
+.block-form__inpunt {
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding-left: 16px;
+    color: inherit;
+}
+
+.block-form-submit {
+    @extend %flex;
+    width: 200px;
+    height: 50px;
+    color: $background-secondary;
+    background: $color-accent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    .block-form__icon-send {
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+        fill: $background-secondary;
+    }
+}

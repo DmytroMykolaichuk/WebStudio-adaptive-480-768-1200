@@ -1,0 +1,36 @@
+.activity {
+    padding-bottom: $padding-section;
+    }
+
+.activity__title {
+    font-size: 36px;
+    line-height: calc(42/36);
+    text-align: center;
+    margin-bottom: 50px;
+    color: $text-title;
+    }
+    
+.activity__list {
+    display: flex;
+    gap: 30px;
+    }
+    
+.activity__thumb {
+    position: relative;
+    }
+    
+.activity__text {
+    @extend %flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    text-align: center;
+    text-transform: uppercase;
+    color: $background-secondary;
+    background-color: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    }

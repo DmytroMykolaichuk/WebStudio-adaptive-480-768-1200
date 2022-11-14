@@ -1,0 +1,26 @@
+.social {
+    @extend %flex;
+    gap: 10px;
+}
+
+.social__link {
+    @extend %flex;
+    width: 44px;
+    height:44px;
+    color: #AFB1B8;
+    border-radius: 50%;
+    transition: background-color 250ms $cubic,
+    color 250ms $cubic;
+    
+    &:hover,
+    &:focus{
+    background-color: $color-accent;
+    color: $background-secondary;
+}
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}

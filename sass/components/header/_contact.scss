@@ -1,0 +1,39 @@
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.contact__link {
+    color: $text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    transition: color 250ms $cubic;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &:hover,
+    &:focus{
+        color: $color-accent;
+    }
+}
+.contact__icon {
+    fill: currentColor;
+    margin-right: 10px;
+
+    &--envelope{
+        width: 16px;
+        height: 12px;
+    }
+
+    &--smartphone{
+        width: 10px;
+        height: 16px;
+    }
+}

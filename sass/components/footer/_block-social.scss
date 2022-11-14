@@ -1,0 +1,40 @@
+.block-social {
+    margin-left: 70px;
+    margin-right: auto;
+}
+
+.block-social__title {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    text-transform: uppercase;
+    color: $background-secondary;
+    margin-bottom: 20px;
+}
+
+.block-social__list {
+    display: flex;
+    gap: 10px;
+}
+
+.block-social__link {
+    @extend %flex;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: $background-secondary;
+    transition: background-color 250ms $cubic;
+
+    &:hover,
+    &:focus{
+        background-color: $color-accent;
+    }
+}
+
+.block-social__icon {
+    width: 20px;
+    height: 20px;
+    fill:currentColor;
+}

@@ -1,0 +1,16 @@
+.logo {
+    font-family: $raleway;
+    font-weight: 700;
+    font-size: 26px;
+    color: $color-accent;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.logo__studio {
+    color: #000;
+}
+
+.logo__studio--footer {
+    color: $background-secondary;
+}

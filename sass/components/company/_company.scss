@@ -1,0 +1,40 @@
+.company {
+    padding-top: $padding-section;
+    padding-bottom: $padding-section;
+}
+
+.company__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42/36);
+    text-align: center;
+    color: $text-title;
+    margin-bottom: 50px;
+}
+.company__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.company__link {
+    @extend %flex;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    color: #AFB1B8;
+    transition: color 250ms $cubic,
+    border-color 250ms $cubic;
+
+    &:hover,
+    &:focus{
+    border-color: $color-accent;
+    color: $color-accent;
+    }
+}
+.company__icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}

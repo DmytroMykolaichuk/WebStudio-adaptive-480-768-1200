@@ -1,0 +1,11 @@
+.footer {
+    background-color: $background-primary;
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__container{
+    display: flex;
+    align-items: baseline;
+}

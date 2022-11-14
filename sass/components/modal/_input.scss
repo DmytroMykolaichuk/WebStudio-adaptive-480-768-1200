@@ -1,0 +1,66 @@
+.modal__title {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height:calc(23/20);
+    text-align: center;
+    color: $text-title;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal__form {
+    @extend %flex;
+    flex-direction: column;
+}
+
+.modal__label {
+    position: relative;
+    margin-bottom: 28px;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    color: $text-color;
+}
+
+.modal__name-input {
+    position: absolute;
+    top: -18px;
+    color: $text-color;
+}
+
+.modal__input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border-color 250ms $cubic;
+
+    .modal__label:focus-within &,
+    .modal__label:hover &,
+    &:not(:placeholder-shown){
+    border-color:  $color-accent;
+    } 
+}
+
+.modal__icon-input {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    color: $text-title;
+    fill: currentColor;
+    transition: color 250ms $cubic;
+
+    .modal__label:focus-within &,
+    .modal__label:hover &,
+    .modal__input:not(:placeholder-shown)+&{
+    fill: $color-accent;
+    }
+}
+
+
+

@@ -1,0 +1,33 @@
+.features{
+    padding-top: $padding-section;
+    padding-bottom: $padding-section;
+}
+
+.features__list {
+    display: flex;
+    gap: 30px;
+}
+
+.features__thumb {
+    @extend %flex;
+    background-color: $background-btn ;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.features__icon {
+    width: 70px;
+    height: 70px;
+}
+.features__title {
+    color: $text-title;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.features__text {
+    font-size: 14px;
+    line-height: calc(24/14);
+}
