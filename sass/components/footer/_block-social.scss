@@ -1,6 +1,17 @@
 .block-social {
-    margin-left: 70px;
-    margin-right: auto;
+    @media screen and(max-width: 1199px) {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    @media screen and(min-width: 768px) and(max-width:1199px) {
+        flex-basis: 50%;
+    }
+
+    @media screen and(min-width: 1200px) {
+        margin-left: 70px;
+        margin-right: auto;
+    }
 }
 
 .block-social__title {
@@ -15,6 +26,7 @@
 
 .block-social__list {
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 

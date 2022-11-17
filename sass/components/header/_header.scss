@@ -1,6 +1,46 @@
 .header {
     border-bottom: 1px solid #ECECEC;
 }
+
 .header__container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header__menu{
+    display: inline-block;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+
+.icon-cross{
+    display: none;
+}
+
+.is-open .icon-cross{
+    display: block;
+}
+
+.is-open .icon-burger{
+    display: none;
+}
+
+.header__wrap{
+    display: none;
+    background-color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    &.is-open{
+        display: block;
+    }
 }

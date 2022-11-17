@@ -9,54 +9,74 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"/>
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-	<body>
-    <header class="header"> 
+  <body>
+    <header class="header">
       <div class="container header__container">
-        <a href="./index.html" class="logo">Web<span class="logo__studio">Studio</span></a>
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item"><a href="./index.html" class="navigation__link navigation__link--current">Студія</a></li>
-            <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфоліо</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+        <a href="./index.html" class="logo header__logo">Web<span class="logo__studio">Studio</span></a>
+        <button
+          type="button"
+          class="header__menu is-open"
+          aria-controls="header__wrap"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg class="header__icons" width="40px" height="40px" aria-label="Перемикач мобільного меню">
+            <use class="icon-burger" href="./images/icons.svg#menu"></use>
+            <use class="icon-cross" href="./images/icons.svg#close_menu"></use>
+          </svg>
+        </button>
+        <div class="header__wrap is-open" id="header__wrap" data-menu>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./index.html" class="navigation__link navigation__link--current">Студія</a>
+              </li>
+              <li class="navigation__item">
+                <a href="./portfolio.html" class="navigation__link">Портфоліо</a>
+              </li>
+              <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+            </ul>
+          </nav>
+          <ul class="contact">
+            <li class="contact__item">
+              <a href="mailto:info@devstudio.com" class="contact__link">
+                <svg class="contact__icon contact__icon--envelope">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contact__item">
+              <a href="tel:+380961111111" class="contact__link">
+                <svg class="contact__icon contact__icon--smartphone">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096111 11 11
+              </a>
+            </li>
           </ul>
-        </nav>
-        <ul class="contact">
-          <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact__link">
-              <svg class="contact__icon contact__icon--envelope">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact__item">
-            <a href="tel:+380961111111" class="contact__link">
-              <svg class="contact__icon contact__icon--smartphone">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
-		<main>
+    <main>
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="hero__button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
-			<section class="features">
+      <section class="features">
         <div class="container">
           <h2 class="features__pseudo-title">Наші переваги</h2>
           <ul class="features__list">
@@ -105,7 +125,7 @@
           </ul>
         </div>
       </section>
-			<section class="activity">
+      <section class="activity">
         <div class="container">
           <h2 class="activity__title">Чим ми займаємося</h2>
           <ul class="activity__list">
@@ -148,18 +168,23 @@
           </ul>
         </div>
       </section>
-			<section class="team">
+      <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="people">
             <li class="people__item">
-              <img
-								class="people__photo"
-                src="./images/one.jpg"
-                alt="Дизайнер Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="./images/one.jpg 1x, ./images/one@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/one-354.jpg 1x, ./images/one-354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/one-450.jpg 1x, ./images/one-450@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img class="people__photo" src="./images/one-450.jpg" alt="Дизайнер Ігор Дем'яненко" />
+              </picture>
               <div class="people__thumb">
                 <h3 class="people__name">Ігор Дем'яненко</h3>
                 <p lang="en" class="people__profession">Product Designer</p>
@@ -190,13 +215,18 @@
               </div>
             </li>
             <li class="people__item">
-              <img
-								class="people__photo"
-                src="./images/two.jpg"
-                alt="Розробник Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="./images/two.jpg 1x, ./images/two@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/two-354.jpg 1x, ./images/two-354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/two-450.jpg 1x, ./images/two-450@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img class="people__photo" src="./images/two-450.jpg" alt="Розробник Ольга Рєпіна" />
+              </picture>
               <div class="people__thumb">
                 <h3 class="people__name">Ольга Рєпіна</h3>
                 <p lang="en" class="people__profession">Frontend Developer</p>
@@ -227,13 +257,21 @@
               </div>
             </li>
             <li class="people__item">
-              <img
-								class="people__photo"
-                src="./images/three.jpg"
-                alt="Маркетолог Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/three.jpg 1x, ./images/three@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/three-354.jpg 1x, ./images/three-354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/three-450.jpg 1x, ./images/three-450@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img class="people__photo" src="./images/three-450.jpg" alt="Маркетолог Микола Тарасов" />
+              </picture>
               <div class="people__thumb">
                 <h3 class="people__name">Микола Тарасов</h3>
                 <p lang="en" class="people__profession">Marketing</p>
@@ -264,13 +302,22 @@
               </div>
             </li>
             <li class="people__item">
-              <img
-								class="people__photo"
-                src="./images/four.jpg"
-                alt="Дизайнер Інтерфейсу Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="./images/four.jpg 1x, ./images/four@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/four-354.jpg 1x, ./images/four-354@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/four-450.jpg 1x, ./images/four-450@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="people__photo"
+                  src="./images/four-450.jpg"
+                  alt="Дизайнер Інтерфейсу Михайло Єрмаков"
+                />
+              </picture>
               <div class="people__thumb">
                 <h3 class="people__name">Михайло Єрмаков</h3>
                 <p lang="en" class="people__profession">Designer</p>
@@ -303,7 +350,7 @@
           </ul>
         </div>
       </section>
-			<section class="company">
+      <section class="company">
         <div class="container">
           <h2 class="company__title">Постійні клієнти</h2>
           <ul class="company__list">
@@ -341,22 +388,21 @@
         </div>
       </section>
     </main>
-		<footer class="footer">
-      <div class="container footer__container"><!--footer-container-->
+    <footer class="footer">
+      <div class="container footer__container">
         <div class="block-contacts">
           <a href="./index.html" class="logo"
             >Web<span class="logo__studio logo__studio--footer">Studio</span></a
           >
           <address class="block-contacts__address block-contacts__address">
-            <ul class="block-contacts_list"><!--active-->
+            <ul class="block-contacts_list">
               <li class="block-contacts__item">
                 <a
-									class="block-contacts__link block-contacts__link--physical"
+                  class="block-contacts__link block-contacts__link--physical"
                   href="https://goo.gl/maps/LZwkr4hhLzCrX7JeA"
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                   >м. Київ, пр-т Лесі Українки, 26</a
-                ><!--physical-->
               </li>
               <li class="block-contacts__item">
                 <a href="mailto:info@devstudio.com" class="block-contacts__link">info@devstudio.com</a>
@@ -397,12 +443,7 @@
           <b class="block-form__title">Підпишіться на розсилку</b>
           <form class="block-form__form">
             <label class="block-form__lable">
-              <input
-								class="block-form__inpunt"
-                type="email"
-                name="footer-email"
-                placeholder="E-mail"
-              />
+              <input class="block-form__inpunt" type="email" name="footer-email" placeholder="E-mail" />
             </label>
             <button type="submit" class="block-form-submit">
               Підписатися
@@ -414,7 +455,7 @@
         </div>
       </div>
     </footer>
-		<div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__btn-close" data-modal-close>
           <svg class="modal__icon-close">
@@ -460,5 +501,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

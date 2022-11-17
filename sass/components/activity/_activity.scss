@@ -1,6 +1,12 @@
+.activity{
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }     
+}
+
 .activity {
     padding-bottom: $padding-section;
-    }
+}
 
 .activity__title {
     font-size: 36px;
@@ -13,11 +19,11 @@
 .activity__list {
     display: flex;
     gap: 30px;
-    }
+}
     
 .activity__thumb {
     position: relative;
-    }
+}
     
 .activity__text {
     @extend %flex;

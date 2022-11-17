@@ -28,7 +28,9 @@
         "format": "expanded",
             "extensionName": ".css",
             "savePath": "/css"
-    },
+    }
+
+    ,
     {
     "format": "compressed",
         "extensionName": ".min.css",
@@ -42,3 +44,5 @@
 "liveSassCompile.settings.autoprefix": ["> 1%",
 "last 2 versions"]
 }
+
+linear-gradient(#2F303A66, #2F303A66)
