@@ -6,19 +6,28 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms $cubic;
+
+    @media screen and(max-width: 767px) {
+        padding: 15px;
+    }
 }
 .is-hidden {
     opacity: 0;
     pointer-events: none;
 }
 .modal {
+    @media screen and(max-width: 1199px){
+        position: relative;
+        max-width: 450px;
+    }
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 600ms $cubic;
-    min-width: 528px;
-    height: 581px;
+ 
+
     background: $background-secondary;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
