@@ -109,15 +109,15 @@ a {
   cursor: pointer;
 }
 
-.icon-cross {
+.header__menu .icon-cross {
   display: none;
 }
 
-.is-open .icon-cross {
+.header__menu.is-open .icon-cross {
   display: block;
 }
 
-.is-open .icon-burger {
+.header__menu.is-open .icon-burger {
   display: none;
 }
 
@@ -129,6 +129,10 @@ a {
   left: 0;
   width: 100%;
 }
+.header__wrap.is-open {
+  display: block;
+}
+
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -1128,8 +1132,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  font-size: 12px;
-  line-height: 1.1666666667;
   cursor: pointer;
   width: 100%;
 }
@@ -1165,19 +1167,22 @@ a {
   fill: currentColor;
 }
 
+.modal__checkbox-text {
+  font-size: 12px;
+  line-height: 1.1666666667;
+}
+@media screen and (min-width: 1200px) {
+  .modal__checkbox-text {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
+}
+
 .modal__link-police {
   margin-left: 3px;
   text-decoration: underline;
   color: #2196F3;
   font-family: inherit;
-  font-size: 12px;
-  line-height: 1.1666666667;
-}
-@media screen and (min-width: 1200px) {
-  .modal__link-police {
-    font-size: 14px;
-    line-height: 3;
-  }
 }
 
 .portfolio {

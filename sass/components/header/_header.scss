@@ -20,15 +20,15 @@
 }
 
 
-.icon-cross{
+.header__menu .icon-cross{
     display: none;
 }
 
-.is-open .icon-cross{
+.header__menu.is-open .icon-cross{
     display: block;
 }
 
-.is-open .icon-burger{
+.header__menu.is-open .icon-burger{
     display: none;
 }
 
@@ -41,6 +41,6 @@
     width: 100%;
 
     &.is-open{
-        // display: block;
+        display: block;
     }
 }
