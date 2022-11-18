@@ -121,14 +121,19 @@ a {
   display: none;
 }
 
-.header__wrap {
+.header__wrap.is-open {
   display: none;
+}
+
+.header__wrap {
+  display: block;
   background-color: red;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
 }
+
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;

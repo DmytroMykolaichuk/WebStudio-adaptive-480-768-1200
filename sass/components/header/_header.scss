@@ -32,15 +32,15 @@
     display: none;
 }
 
-.header__wrap{
+.header__wrap.is-open{
     display: none;
+}
+
+.header__wrap {
+    display: block;
     background-color: red;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-
-    &.is-open{
-        // display: block;
-    }
 }
