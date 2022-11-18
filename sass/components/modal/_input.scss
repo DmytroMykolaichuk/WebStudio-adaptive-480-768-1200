@@ -1,21 +1,10 @@
-.modal__title {
-    display: block;
-    font-weight: 700;
-    font-size: 20px;
-    line-height:calc(23/20);
-    text-align: center;
-    color: $text-title;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .modal__form {
     @extend %flex;
     flex-direction: column;
 }
 
 .modal__label {
+    width: 100%;
     position: relative;
     margin-bottom: 28px;
     font-size: 12px;
@@ -31,7 +20,7 @@
 }
 
 .modal__input {
-    width: 448px;
+    width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -43,6 +32,14 @@
     &:not(:placeholder-shown){
     border-color:  $color-accent;
     } 
+
+    @media screen and(min-width: 480px) {
+        width: 370px;
+    }
+
+    @media screen and(min-width: 1200px){
+        width: 448px;
+    }
 }
 
 .modal__icon-input {

@@ -129,10 +129,6 @@ a {
   left: 0;
   width: 100%;
 }
-.header__wrap.is-open {
-  display: block;
-}
-
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -876,10 +872,11 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   .backdrop {
-    padding: 15px;
+    padding: 93px 15px;
   }
 }
 
@@ -889,30 +886,35 @@ a {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
 }
-@media screen and (max-width: 1199px) {
-  .modal {
-    position: relative;
-    max-width: 450px;
-  }
-}
 .is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(1.5);
           transform: translate(-50%, -50%) scale(1.5);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .modal__btn-close {
@@ -948,6 +950,23 @@ a {
   fill: currentColor;
 }
 
+.modal__title {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
+}
+
 .modal__btn {
   width: 200px;
   height: 50px;
@@ -970,18 +989,6 @@ a {
   background-color: #188CE8;
 }
 
-.modal__title {
-  display: block;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  color: #212121;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .modal__form {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -990,6 +997,7 @@ a {
 }
 
 .modal__label {
+  width: 100%;
   position: relative;
   margin-bottom: 28px;
   font-size: 12px;
@@ -1005,7 +1013,7 @@ a {
 }
 
 .modal__input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1021,6 +1029,16 @@ a {
 }
 .modal__label:focus-within .modal__input, .modal__label:hover .modal__input, .modal__input:not(:placeholder-shown) {
   border-color: #2196F3;
+}
+@media screen and (min-width: 480px) {
+  .modal__input {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__input {
+    width: 448px;
+  }
 }
 
 .modal__icon-input {
@@ -1045,12 +1063,18 @@ a {
 }
 
 .modal__label-textarea {
-  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 28px;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.01em;
+  color: #757575;
+  width: 100%;
 }
 
 .modal__textarea {
   resize: none;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1082,19 +1106,42 @@ a {
 .modal__label-textarea:focus-within .modal__textarea, .modal__textarea:not(:placeholder-shown), .modal__label-textarea:hover .modal__textarea {
   border-color: #2196F3;
 }
+@media screen and (min-width: 480px) {
+  .modal__textarea {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__textarea {
+    width: 448px;
+  }
+}
 
 .modal__label-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  width: 425px;
-  font-size: 14px;
-  line-height: 1.7142857143;
+  font-size: 12px;
+  line-height: 1.1666666667;
   cursor: pointer;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .modal__label-checkbox {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__label-checkbox {
+    width: 425px;
+  }
 }
 
 .modal__checkbox {
@@ -1119,13 +1166,18 @@ a {
 }
 
 .modal__link-police {
-  position: relative;
   margin-left: 3px;
   text-decoration: underline;
   color: #2196F3;
   font-family: inherit;
-  font-size: 14px;
-  line-height: 1.7142857143;
+  font-size: 12px;
+  line-height: 1.1666666667;
+}
+@media screen and (min-width: 1200px) {
+  .modal__link-police {
+    font-size: 14px;
+    line-height: 3;
+  }
 }
 
 .portfolio {
@@ -1199,12 +1251,6 @@ a {
       flex-wrap: wrap;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .project__item {
-    max-width: 354px;
-  }
-}
-
 .project__link {
   display: block;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1252,17 +1298,11 @@ a {
   border-left: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .project__result.maket {
-    padding-bottom: 54px;
-  }
-}
 
 .project__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
   margin-bottom: 4px;
   color: #212121;
 }

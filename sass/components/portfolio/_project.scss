@@ -4,13 +4,6 @@
     flex-wrap: wrap;
 }
 
-.project__item{
-    @media screen and(min-width:768px) and(max-width: 1199px){
-        // flex-basis: calc((100% - 30px) / 2);
-        max-width: 354px;
-    }
-}
-
 .project__link {
     display: block;
     transition: box-shadow 250ms $cubic;
@@ -52,19 +45,12 @@
     border-right: 1px solid $border-card;
     border-left: 1px solid $border-card;
     border-bottom: 1px solid $border-card;
-
-    @media screen and(min-width:768px) and(max-width: 1199px) {
-        &.maket {
-            padding-bottom: 54px;
-        }
-    }
 }
 
 .project__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 0.06em;
     margin-bottom: 4px;
     color: $text-title;
 }
