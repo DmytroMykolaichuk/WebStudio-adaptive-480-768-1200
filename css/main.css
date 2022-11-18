@@ -129,6 +129,10 @@ a {
   left: 0;
   width: 100%;
 }
+.header__wrap.is-open {
+  display: block;
+}
+
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
