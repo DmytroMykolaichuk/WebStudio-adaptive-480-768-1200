@@ -123,7 +123,7 @@ a {
 .header__menu .icon-burger {
   fill: #212121;
 }
-.header__menu:focus .icon-burger, .header__menu:focus .icon-cross, .header__menu:hover .icon-cross, .header__menu:hover .icon-burger {
+.header__menu:active .icon-burger, .header__menu:active .icon-cross, .header__menu:hover .icon-cross, .header__menu:hover .icon-burger {
   fill: #2196F3;
 }
 @media screen and (min-width: 767px) {

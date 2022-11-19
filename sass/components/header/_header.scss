@@ -33,8 +33,10 @@
         fill: $text-title;
     }
 
-    &:focus .icon-burger,
-    &:focus .icon-cross,
+    // &:focus .icon-burger,
+    // &:focus .icon-cross,
+    &:active .icon-burger,
+    &:active .icon-cross,
     &:hover .icon-cross,
     &:hover .icon-burger {
         fill: $color-accent;
