@@ -14,11 +14,13 @@
     @media screen and (min-width: 768px) {
         padding-top: 26px;
         padding-bottom: 26px;
+        margin-right: 87px;
     }
     
     @media screen and (min-width: 1200px) {
         padding-top: 24px;
-        padding-bottom: 25px
+        padding-bottom: 25px;
+        margin-right: 92px;
     }
 }
 
@@ -28,4 +30,8 @@
 
 .logo__studio--footer {
     color: $background-secondary;
+}
+
+.header__wrap.is-open .logo{
+    display: none;
 }

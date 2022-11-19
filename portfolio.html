@@ -25,9 +25,9 @@
       <div class="container header__container">
         <a href="./index.html" class="logo header__logo">Web<span class="logo__studio">Studio</span></a>
         <button
-          type="button"
-          class="header__menu is-open"
+          class="header__menu"
           aria-controls="header__wrap"
+          type="button"
           aria-expanded="false"
           data-menu-button
         >
@@ -36,14 +36,14 @@
             <use class="icon-cross" href="./images/icons.svg#close_menu"></use>
           </svg>
         </button>
-        <div class="header__wrap is-open" id="header__wrap" data-menu>
+        <div class="header__wrap" id="header__wrap" data-menu>
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="./index.html" class="navigation__link navigation__link--current">Студія</a>
+                <a href="./index.html" class="navigation__link">Студія</a>
               </li>
               <li class="navigation__item">
-                <a href="./portfolio.html" class="navigation__link">Портфоліо</a>
+                <a href="./portfolio.html" class="navigation__link navigation__link--current">Портфоліо</a>
               </li>
               <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
             </ul>
@@ -66,6 +66,12 @@
               </a>
             </li>
           </ul>
+          <ul class="soc">
+            <li class="soc__item"><a class="soc__link" href="#">Instagram</a></li>
+            <li class="soc__item"><a class="soc__link" href="#">Twitter</a></li>
+            <li class="soc__item"><a class="soc__link" href="#">Facebook</a></li>
+            <li class="soc__item"><a class="soc__link" href="#">LinkedIn</a></li>
+          </ul>
         </div>
       </div>
     </header>
@@ -85,14 +91,19 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/techno.jpg 1x, ./images/portfolio/techno@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/techno-354.jpg 1x, ./images/portfolio/techno-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/techno-450.jpg 1x, ./images/portfolio/techno-450@2x.jpg 2x" media="(max-width: 767px)">
-                    <img
-                      src="./images/portfolio/techno-450.jpg"
-                      alt="Ноутбук"
-                      class="project__photo"
+                    <source
+                      srcset="./images/portfolio/techno.jpg 1x, ./images/portfolio/techno@2x.jpg 2x"
+                      media="(min-width: 1200px)"
                     />
+                    <source
+                      srcset="./images/portfolio/techno-354.jpg 1x, ./images/portfolio/techno-354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/techno-450.jpg 1x, ./images/portfolio/techno-450@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfolio/techno-450.jpg" alt="Ноутбук" class="project__photo" />
                   </picture>
                   <p class="project__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
@@ -109,9 +120,24 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/golden-star.jpg 1x, ./images/portfolio/golden-star@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/golden-star-354.jpg 1x, ./images/portfolio/golden-star-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/golden-star-450.jpg 1x, ./images/portfolio/golden-star-450@2x.jpg 2x" media="(max-width: 767px)">
+                    <source
+                      srcset="./images/portfolio/golden-star.jpg 1x, ./images/portfolio/golden-star@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/golden-star-354.jpg    1x,
+                        ./images/portfolio/golden-star-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/golden-star-450.jpg    1x,
+                        ./images/portfolio/golden-star-450@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
                     <img
                       src="./images/portfolio/golden-star-450.jpg"
                       alt="Баскетболісти"
@@ -133,9 +159,18 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/seafood.jpg 1x, ./images/portfolio/seafood@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/seafood-354.jpg 1x, ./images/portfolio/seafood-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/seafood-450.jpg 1x, ./images/portfolio/seafood-450@2x.jpg 2x" media="(max-width: 767px)">
+                    <source
+                      srcset="./images/portfolio/seafood.jpg 1x, ./images/portfolio/seafood@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/seafood-354.jpg 1x, ./images/portfolio/seafood-354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/seafood-450.jpg 1x, ./images/portfolio/seafood-450@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
                     <img
                       src="./images/portfolio/seafood-450.jpg"
                       alt="Логотип ресторана"
@@ -157,14 +192,19 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/prime.jpg 1x, ./images/portfolio/prime@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/prime-354.jpg 1x, ./images/portfolio/prime-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/prime-450.jpg 1x, ./images/portfolio/prime-450@2x.jpg 2x" media="(max-width: 767px)">
-                    <img
-                      src="./images/portfolio/prime-450.jpg"
-                      alt="Навушники"
-                      class="project__photo"
+                    <source
+                      srcset="./images/portfolio/prime.jpg 1x, ./images/portfolio/prime@2x.jpg 2x"
+                      media="(min-width: 1200px)"
                     />
+                    <source
+                      srcset="./images/portfolio/prime-354.jpg 1x, ./images/portfolio/prime-354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/prime-450.jpg 1x, ./images/portfolio/prime-450@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfolio/prime-450.jpg" alt="Навушники" class="project__photo" />
                   </picture>
                   <p class="project__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
@@ -181,14 +221,19 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/boxes.jpg 1x, ./images/portfolio/boxes@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/boxes-354.jpg 1x, ./images/portfolio/boxes-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/boxes-450.jpg 1x, ./images/portfolio/boxes-450@2x.jpg 2x" media="(max-width: 767px)">
-                    <img
-                      src="./images/portfolio/boxes-450.jpg"
-                      alt="Дві коробки"
-                      class="project__photo"
+                    <source
+                      srcset="./images/portfolio/boxes.jpg 1x, ./images/portfolio/boxes@2x.jpg 2x"
+                      media="(min-width: 1200px)"
                     />
+                    <source
+                      srcset="./images/portfolio/boxes-354.jpg 1x, ./images/portfolio/boxes-354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/boxes-450.jpg 1x, ./images/portfolio/boxes-450@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfolio/boxes-450.jpg" alt="Дві коробки" class="project__photo" />
                   </picture>
                   <p class="project__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
@@ -205,9 +250,18 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/borders.jpg 1x, ./images/portfolio/borders@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/borders-354.jpg 1x, ./images/portfolio/borders-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/borders-450.jpg 1x, ./images/portfolio/borders-450@2x.jpg 2x" media="(max-width: 767px)">
+                    <source
+                      srcset="./images/portfolio/borders.jpg 1x, ./images/portfolio/borders@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/borders-354.jpg 1x, ./images/portfolio/borders-354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/borders-450.jpg 1x, ./images/portfolio/borders-450@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
                     <img
                       src="./images/portfolio/borders-450.jpg"
                       alt="Монітор з картою світу"
@@ -229,9 +283,27 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/limited-edition.jpg 1x, ./images/portfolio/limited-edition@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/limited-edition-354.jpg 1x, ./images/portfolio/limited-edition-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/limited-edition-450.jpg 1x, ./images/portfolio/limited-edition-450@2x.jpg 2x" media="(max-width: 767px)">
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition.jpg    1x,
+                        ./images/portfolio/limited-edition@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-354.jpg    1x,
+                        ./images/portfolio/limited-edition-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-450.jpg    1x,
+                        ./images/portfolio/limited-edition-450@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
                     <img
                       src="./images/portfolio/limited-edition-450.jpg"
                       alt="Книга"
@@ -253,14 +325,19 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/lab.jpg 1x, ./images/portfolio/lab@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/lab-354.jpg 1x, ./images/portfolio/lab-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/lab-450.jpg 1x, ./images/portfolio/lab-450@2x.jpg 2x" media="(max-width: 767px)">
-                    <img
-                      src="./images/portfolio/lab-450.jpg"
-                      alt="Ярлик"
-                      class="project__photo"
+                    <source
+                      srcset="./images/portfolio/lab.jpg 1x, ./images/portfolio/lab@2x.jpg 2x"
+                      media="(min-width: 1200px)"
                     />
+                    <source
+                      srcset="./images/portfolio/lab-354.jpg 1x, ./images/portfolio/lab-354@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/lab-450.jpg 1x, ./images/portfolio/lab-450@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfolio/lab-450.jpg" alt="Ярлик" class="project__photo" />
                   </picture>
                   <p class="project__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
@@ -277,9 +354,27 @@
               <a href="#" class="project__link">
                 <div class="project__thumb">
                   <picture>
-                    <source srcset="./images/portfolio/growing-business.jpg 1x, ./images/portfolio/growing-business@2x.jpg 2x" media="(min-width: 1200px)">
-                    <source srcset="./images/portfolio/growing-business-354.jpg 1x, ./images/portfolio/growing-business-354@2x.jpg 2x" media="(min-width: 768px)">
-                    <source srcset="./images/portfolio/growing-business-450.jpg 1x, ./images/portfolio/growing-business-450@2x.jpg 2x" media="(max-width: 767px)">
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business.jpg    1x,
+                        ./images/portfolio/growing-business@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-354.jpg    1x,
+                        ./images/portfolio/growing-business-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-450.jpg    1x,
+                        ./images/portfolio/growing-business-450@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
                     <img
                       src="./images/portfolio/growing-business-450.jpg"
                       alt="Підприємець працює онлайн"
@@ -316,6 +411,7 @@
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                   >м. Київ, пр-т Лесі Українки, 26</a
+                >
               </li>
               <li class="block-contacts__item">
                 <a href="mailto:info@devstudio.com" class="block-contacts__link">info@devstudio.com</a>
@@ -368,5 +464,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
