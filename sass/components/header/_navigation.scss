@@ -46,11 +46,11 @@
             border-radius: 2px;
         }
     }
-    @media screen and(min-width: 1200px){
-        &::after {
-            content: "";
-            bottom: -1px;
-        }
-    }
+    // @media screen and(min-width: 1200px){
+    //     &::after {
+    //         content: "";
+    //         bottom: -1px;
+    //     }
+    // }
     }
 }

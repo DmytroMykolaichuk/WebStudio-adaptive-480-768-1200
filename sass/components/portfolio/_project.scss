@@ -27,7 +27,7 @@
     height: 100%;
     transform: translateY(294px);
     transition: transform 250ms $cubic;
-    pointer-events: none;
+    overflow: auto;
     padding: 63px 24px;
     font-size: 18px;
     line-height: calc(28/18);

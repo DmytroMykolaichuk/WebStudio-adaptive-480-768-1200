@@ -11,18 +11,12 @@
 
 .header__menu{
     position: relative;
-    z-index: 100;
+    z-index: 2;
     display: inline-block;
     margin-left: auto;
     padding: 0;
     border: none;
     background-color: transparent;
-    cursor: pointer;
-
-    &:hover,
-    &:focus{
-        color: $color-accent;
-    }
 
     .icon-cross {
         display: none;
@@ -34,14 +28,29 @@
         display: none;
     }
 
-    .header__icons {
-        fill: currentColor;
+    .icon-cross,
+    .icon-burger {
+        fill: $text-title;
     }
+
+    &:focus .icon-burger,
+    &:focus .icon-cross,
+    &:hover .icon-cross,
+    &:hover .icon-burger {
+        fill: $color-accent;
+    }
+
+    // .header__icons {
+    //     fill: currentColor;
+    // }
 
     @media screen and(min-width: 767px) {
         display: none;
     }
 }
+
+
+
 
 
 
@@ -62,7 +71,7 @@
         padding-top: 48px;
         padding-bottom: 48px;
         padding-left: 40px;
-        z-index: 99;
+        z-index: 1;
         }    
     }
 }
