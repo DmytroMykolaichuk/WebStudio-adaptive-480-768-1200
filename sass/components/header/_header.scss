@@ -10,7 +10,7 @@
 }
 
 .header__menu{
-    position: relative;
+    // position: relative;
     z-index: 2;
     display: inline-block;
     margin-left: auto;
@@ -42,19 +42,10 @@
         fill: $color-accent;
     }
 
-    // .header__icons {
-    //     fill: currentColor;
-    // }
-
     @media screen and(min-width: 767px) {
         display: none;
     }
 }
-
-
-
-
-
 
 @media screen and(max-width: 767px){
     .header__wrap {
@@ -64,7 +55,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         display: flex;
         flex-direction: column;
