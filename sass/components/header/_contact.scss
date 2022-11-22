@@ -23,6 +23,7 @@
 
 
 .contact__link {
+    max-width: 100%;
     color: $text-color;
     font-weight: 500;
     font-size: 24px;
@@ -44,7 +45,7 @@
     &:hover,
     &:focus{
         color: $color-accent;
-    @media screen and(max-width: 767px) {
+    @media screen and(min-width: 480px) and(max-width: 767px) {
         font-size: 34px;
         line-height: calc(40 / 34);
     }    

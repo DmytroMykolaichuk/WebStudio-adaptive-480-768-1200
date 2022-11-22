@@ -310,6 +310,7 @@ a {
 }
 
 .contact__link {
+  max-width: 100%;
   color: #757575;
   font-weight: 500;
   font-size: 24px;
@@ -333,7 +334,7 @@ a {
 .contact__link:hover, .contact__link:focus {
   color: #2196F3;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .contact__link:hover, .contact__link:focus {
     font-size: 34px;
     line-height: 1.1764705882;
